@@ -1,1 +1,31 @@
+-- +-------------+---------+
+-- | Column Name | Type    |
+-- +-------------+---------+
+-- | id          | int     |
+-- | name        | varchar |
+-- | referee_id  | int     |
+-- +-------------+---------+
+
+-- Input: 
+-- Customer table:
+-- +----+------+------------+
+-- | id | name | referee_id |
+-- +----+------+------------+
+-- | 1  | Will | null       |
+-- | 2  | Jane | null       |
+-- | 3  | Alex | 2          |
+-- | 4  | Bill | null       |
+-- | 5  | Zack | 1          |
+-- | 6  | Mark | 2          |
+-- +----+------+------------+
+-- Output: 
+-- +------+
+-- | name |
+-- +------+
+-- | Will |
+-- | Jane |
+-- | Bill |
+-- | Zack |
+-- +------+
+
 SELECT NAME FROM CUSTOMER WHERE REFEREE_ID!=2 OR REFEREE_ID IS NULL;
