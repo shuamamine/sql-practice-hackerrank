@@ -28,8 +28,7 @@ SELECT name, ROUND(population/1000000,2), ROUND(GDP/1000000000,2) FROM world WHE
 
 SELECT name, ROUND(gdp/population,-3) FROM world WHERE gdp > 1000000000000;
 
-SELECT name, LENGTH(name), continent, LENGTH(continent), capital, LENGTH(capital)
-FROM world WHERE name LIKE 'G%';
+SELECT name,  capital FROM world WHERE LENGTH(name)=LENGTH(capital)
 
 SELECT name, capital FROM world WHERE LEFT(name,1)=LEFT(capital,1)AND name <> capital;
 
