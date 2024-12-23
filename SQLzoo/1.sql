@@ -4,7 +4,7 @@ SELECT population FROM world WHERE name = 'Germany';
 
 SELECT name, population FROM world WHERE name IN ('Sweden', 'Norway', 'Denmark');
 
-SELECT name, area FROM world WHERE area BETWEEN 200000 AND 250000;
+SELECT name, area FROM world WHERE area BETWEEN 200000AND 250000;
 
 -- QUERIES of SELECT
 
@@ -31,3 +31,6 @@ SELECT name, ROUND(gdp/population,-3) FROM world WHERE gdp > 1000000000000;
 SELECT name, LENGTH(name), continent, LENGTH(continent), capital, LENGTH(capital)
 FROM world WHERE name LIKE 'G%';
 
+SELECT name, capital FROM world WHERE LEFT(name,1)=LEFT(capital,1)AND name <> capital;
+
+SELECT name FROM world WHERE name LIKE '%u%' AND name LIKE '%a%' AND name LIKE '%o%' AND name LIKE '%i%' AND name LIKE '%e%'AND name NOT LIKE '% %';
